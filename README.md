@@ -1,3 +1,2 @@
-# Exercise: Build Minesweeper with JavaScript
-
-...with vanilla JS using recursion (🤮)
+# Exercise: Build Minesweeper
+...with vanilla JS and using recursion (🤮)
