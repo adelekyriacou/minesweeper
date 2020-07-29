@@ -54,7 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   }
-
   createBoard();
 
   // Add flag with right click
