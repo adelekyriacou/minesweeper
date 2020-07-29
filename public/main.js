@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let width = 10;
   let bombAmount = 20;
   let squares = [];
+  let isGameOver = false;
 
 
   // Create board
@@ -41,4 +42,17 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   createBoard();
+  // Game gameOver
+  function gameOver (square) {
+    console.log('Boom! Game over!');
+    isGameOver = true
+
+    // Show all the bombs
+    squares.forEach(square => {
+      if (square.classList.contains('bomb')) {
+        square.innerHTML = '💣'
+      }
+    })
+  }
+
 })
