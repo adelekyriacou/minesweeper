@@ -20,6 +20,13 @@ document.addEventListener('DOMContentLoaded', () => {
       square.classList.add(shuffledArray[i]);
       grid.appendChild(square);
       squares.push(square);
+
+      // Normal click
+      square.addEventListener('click', function(e) {
+        click(square)
+      })
+    }
+
     // Add numbers
     for (let i = 0; i < squares.length; i++) {
       let total = 0;
