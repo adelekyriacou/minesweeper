@@ -42,6 +42,29 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   createBoard();
+
+  // Click on square actions
+  function click(square) {
+    let currentId = square.id;
+
+    if (isGameOver) return;
+
+    if (square.classList.contains('checked') || square.classList.contains('flag')) return;
+
+    if (square.classList.contains('bomb')) {
+      gameOver(square)
+    } else {
+      let total = square.getAttribute('data')
+      if (total !=0) {
+        square.classList.add('checked');
+        square.innerHTML = total;
+        return
+      }
+      checkSquare(square, currentId)
+    }
+    square.classList.add('checked');
+  }
+
   // Game gameOver
   function gameOver (square) {
     console.log('Boom! Game over!');
