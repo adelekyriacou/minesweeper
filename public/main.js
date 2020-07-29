@@ -134,4 +134,19 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   }
 
+  // Check for win
+  function checkForWin() {
+    let matches = 0;
+
+    for (let i = 0; i < squares.length; i++) {
+      if (squares[i].classList.contains('flag') && squares[i].classList.contains('bomb')) {
+        matches++;
+      }
+      if (matches === bombAmount) {
+        console.log('You win!');
+        isGameOver = true;
+      }
+    }
+  }
+
 })
